@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+    char str[100];
+    cin.getline(str, 100);
+    char *start = str;
+    char *end = str + strlen(str) - 1;
+    while (start < end)
+    {
+        char temp = *start;
+        *start = *end;
+        *end = temp;
+        start++;
+        end--;
+    }
+    cout << str;
+    return 0;
+}
